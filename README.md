@@ -34,30 +34,8 @@ type Event struct {
 }
 ```
 
-// New creates a new event with given ID and optional arguments.
-func New(id int, args ...any) Event {
-	return Event{ID: id, Args: args}
-}
+You may use `Arg(idx int)` and `Count()` to get the arguments of an event, or use `Args` directly.
 
-// Arg returns the nth argument and true, nil and false if no argument with that index exists.
-func (e Event) Arg(idx int) (any, bool) {
-	if e.Args == nil {
-		return nil, false
-	}
-	if idx < 0 || idx > len(e.Args)-1 {
-		return nil, false
-	}
-	return e.Args[idx], true
-}
-
-// Count returns the event's number of arguments.
-func (e Event) Count() int {
-	if e.Args == nil {
-		return 0
-	}
-	return len(e.Args)
-}
-`
 ## Dependencies
 
 None.
