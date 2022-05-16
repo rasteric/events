@@ -27,12 +27,12 @@ Publishing and subscribing to events is thread-safe, but be aware that it's very
 
 Events are implemented in a very straightforward way:
 
-`// Event describes an event with an ID and an arbitrary datum associated with the ID.
-// The subscriber is responsible to correctly type dispatch on the Datum, based on the event ID.
+```
 type Event struct {
 	ID   int
 	Args []any
 }
+```
 
 // New creates a new event with given ID and optional arguments.
 func New(id int, args ...any) Event {
