@@ -5,7 +5,6 @@ import (
 	"time"
 )
 
-// TODO implement pubsub here myself
 var lastTime time.Time
 var lastEvent Event
 var subscriptions []func(evt Event)
