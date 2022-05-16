@@ -34,7 +34,7 @@ type Event struct {
 }
 ```
 
-You may use `Arg(idx int)` and `Count()` to get the arguments of an event, or use `Args` directly.
+You may use `Arg(idx int) (any, bool)` and `Count() int` to get the arguments of an event, or use `Args` directly.
 
 ## Dependencies
 
